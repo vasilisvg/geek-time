@@ -14,7 +14,7 @@
 	============================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Geek Time</title>
-	<meta name="description" content="The Geek preception of time: How long before it is, or how long since it was 13:37">
+	<meta name="description" content="The Geek perception of time: How long before it is, or how long since it was 13:37">
 	<meta name="application-name" content="Geek Time">
 	<meta name="apple-mobile-web-app-title" content="Geek Time">
 	<meta name="apple-mobile-web-app-capable" content="yes">
