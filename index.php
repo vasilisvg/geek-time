@@ -19,7 +19,6 @@
 	<meta name="apple-mobile-web-app-title" content="Greek Time">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="refresh" content="120">
 	<link rel="stylesheet" href="http://fonts.typotheque.com/WF-023273-006956.css">
 <style>
 html {
@@ -49,7 +48,7 @@ body {
 	margin: 0;
 	padding:0;
 }
-.rightontime {
+.l337 {
 	color: red;
 }
 </style>
@@ -60,35 +59,27 @@ if(isset($_GET["loop"])) {
 	echo '<video autoplay loop style="width: 1px;height:1px;position:absolute;"><source src="ding.mp4" type=video/mp4></video>';
 	echo '<script>document.querySelector("title").innerHTML = "&nbsp;";</script>';
 }
-if( ! ini_get('date.timezone') ) {
-    date_default_timezone_set('Europe/Amsterdam');
-}
-
-$plm = rand(0,1) < 1 ? -1 : 1 ;
-$nextWeek = time() + ($plm * 1 * rand(0,60) * 60);
-$inAnHour = date('H:i', $nextWeek)
 
 ?>
-<time><?php echo $inAnHour; ?></time>
+<time>13:37</time>
 <script>
 
-function geekHours(n) {
+function geekTime(n) {
+	// Time in JavaScript is crazy.
+	// Or I simply don't get it.
 	var rightNow = new Date(n);
 	var day = rightNow.getDate();
 	var month = rightNow.getMonth();
 	var year = rightNow.getFullYear();
 	var nerdToday = new Date(year,month,day,13,37);
-	console.log("now: "+rightNow.getTime()+" 13:37: "+nerdToday.getTime());
 	var difference = (rightNow.getTime()-nerdToday.getTime());
 	var difHours = (difference/1000/60/60);
 	var difMinutes = (difHours - Math.floor(difHours))*60;
-	//var difMinutes = Math.floor((difference % (60*60))/1000);
 	if (difference<0) {
 		difMinutes = 61 - ((difHours - Math.floor(difHours))*60);
 		difHours = (difference/1000/60/60)+1;
 	}
-	//console.log(difference);
-
+	
 	var timeEl = document.querySelector('time');
 	leetHours = Math.floor(difHours);
 	if (difference < 0 && difference > -3600000) {
@@ -104,27 +95,21 @@ function geekHours(n) {
 		leetMinutes = Math.floor(difMinutes);
 	}
 	if (difference > 0 && difference < 60000) {
-		timeEl.classList.add('rightontime');
+		timeEl.classList.add('l337');
 		leetHours = 13;
 		leetMinutes = 37;
 	}
 	else{
-		timeEl.classList.remove('rightontime');
+		timeEl.classList.remove('l337');
 	}
 	timeEl.innerHTML = leetHours + ':' + leetMinutes;
 
 }
 
-function setGreekTime(dateNow) {
-	var now = new Date(geekHours(dateNow));
-	
-}
-
-setGreekTime(Date.now());
-document.querySelector('[name=refresh]').setAttribute('content','31536000');
+geekTime(Date.now());
 
 setInterval(function(){
-	setGreekTime(Date.now());
+	geekTime(Date.now());
 },1000);
 
 </script>
