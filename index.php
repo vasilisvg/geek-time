@@ -43,7 +43,7 @@ body {
 	    -ms-flex-align: center;
 	        align-items: center;
 	font-family: Irma, helvetica, arial, sans-serif;
-	font-weight: 800;
+	font-weight: 700;
 	font-size: 13em;
 	font-size: 30vw;
 	line-height: 1;
