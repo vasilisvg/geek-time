@@ -19,11 +19,12 @@
 	<meta name="apple-mobile-web-app-title" content="Geek Time">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<link rel="stylesheet" href="http://fonts.typotheque.com/WF-023273-006956.css">
+	<link rel="stylesheet" href="http://fonts.typotheque.com/WF-023273-007762.css">
 <style>
 html {
 	height: 100%;
 	background: hsl(120,2%,89%);
+	text-rendering: optimizeLegibility;
 }
 body {
 	color: hsl(224,42%,27%);
@@ -41,7 +42,8 @@ body {
 	-webkit-align-items: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	font-family: "Fedra Sans Screen Regular", helvetica, arial, sans-serif;
+	font-family: Irma, helvetica, arial, sans-serif;
+	font-weight: 800;
 	font-size: 13em;
 	font-size: 30vw;
 	line-height: 1;
