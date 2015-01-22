@@ -23,11 +23,11 @@
 <style>
 html {
 	height: 100%;
-	background:   hsl(359, 97.5%, 9%);
+	background:   hsl(1337, 37%, 13%);
 	text-rendering: optimizeLegibility;
 }
 body {
-	color:   hsl(110, 50%, 65%);
+	color:   hsl(1337, 13%, 37%);
 	height: 90%;
 	height: 90vh;
 	display: -webkit-box;
